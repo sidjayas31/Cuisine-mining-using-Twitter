@@ -1,0 +1,621 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["geochart"]});
+      google.setOnLoadCallback(drawRegionsMap_Indian);
+	  google.setOnLoadCallback(drawRegionsMap_Chinese);
+	  google.setOnLoadCallback(drawRegionsMap_Italian);
+	  google.setOnLoadCallback(drawRegionsMap_Mexican);
+	  google.setOnLoadCallback(drawRegionsMap_French);
+	  google.setOnLoadCallback(drawRegionsMap_Spanish);
+	  google.setOnLoadCallback(drawRegionsMap_Austrlian);
+	  google.setOnLoadCallback(drawRegionsMap_Japanese);
+	  google.setOnLoadCallback(drawRegionsMap_Lebanese);
+	  google.setOnLoadCallback(drawRegionsMap_all);
+	  
+	  
+	  //all cusines
+	  function drawRegionsMap_all() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets for each country');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',1309,createCustomHTMLContent(1309,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',570,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',321,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',100)]]);
+data.addRows([[ 'australia',3614,createCustomHTMLContent(3614,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1013,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',521,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',206)]]);
+data.addRows([[ 'brazil',353,createCustomHTMLContent(353,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',140,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',102,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',20)]]);
+data.addRows([[ 'canada',4593,createCustomHTMLContent(4593,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1370,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',911,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',286)]]);
+data.addRows([[ 'china',234,createCustomHTMLContent(234,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',82,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',55,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',36)]]);
+data.addRows([[ 'egypt',198,createCustomHTMLContent(198,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',103,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',37,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',19)]]);
+data.addRows([[ 'france',771,createCustomHTMLContent(771,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',232,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',210,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',23)]]);
+data.addRows([[ 'india',2166,createCustomHTMLContent(2166,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',615,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',271,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',193)]]);
+data.addRows([[ 'italy',2053,createCustomHTMLContent(2053,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',876,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',468,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',129)]]);
+data.addRows([[ 'japan',2918,createCustomHTMLContent(2918,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',969,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',593,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',544)]]);
+data.addRows([[ 'Mexico',8208,createCustomHTMLContent(8208,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',2053,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',2001,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',719)]]);
+data.addRows([[ 'russia',247,createCustomHTMLContent(247,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',95,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',95,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',10)]]);
+data.addRows([[ 'spain',746,createCustomHTMLContent(746,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',238,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',155,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',38)]]);
+data.addRows([[ 'thailand',1096,createCustomHTMLContent(1096,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',298,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',286,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',228)]]);
+data.addRows([[ 'united kingdom',716,createCustomHTMLContent(716,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',176,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',157,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',47)]]);
+data.addRows([[ 'USA',4581,createCustomHTMLContent(4581,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1363,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',781,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',398)]]);
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_all')); 
+			chart.draw(data, options);
+      }
+	
+	  
+	  //indian
+      function drawRegionsMap_Indian() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with indian food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',0,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',0)]]);
+data.addRows([[ 'australia',74,createCustomHTMLContent(74,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',22,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',16,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',12)]]);
+data.addRows([[ 'brazil',4,createCustomHTMLContent(4,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',0,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',0)]]);
+data.addRows([[ 'canada',153,createCustomHTMLContent(153,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',64,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',29,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chickentandoori.jpg/250px-Chickentandoori.jpg','tandoori chicken',26)]]);
+data.addRows([[ 'china',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',0,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',0)]]);
+data.addRows([[ 'egypt',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',0,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',0)]]);
+data.addRows([[ 'france',6,createCustomHTMLContent(6,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chickentandoori.jpg/250px-Chickentandoori.jpg','tandoori chicken',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','chole bhature',1)]]);
+data.addRows([[ 'india',536,createCustomHTMLContent(536,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',271,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',152,'https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Idli_Sambar.JPG/250px-Idli_Sambar.JPG','idly',37)]]);
+data.addRows([[ 'italy',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Filter_coffee_South_Indian_style.JPG/220px-Filter_coffee_South_Indian_style.JPG','filter coffee',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',0)]]);
+data.addRows([[ 'japan',13,createCustomHTMLContent(13,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',1)]]);
+data.addRows([[ 'Mexico',89,createCustomHTMLContent(89,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',35,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',27,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',13)]]);
+data.addRows([[ 'spain',7,createCustomHTMLContent(7,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chickentandoori.jpg/250px-Chickentandoori.jpg','tandoori chicken',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Chola_bhatura.jpg/220px-Chola_bhatura.jpg','chole bhature',1)]]);
+data.addRows([[ 'thailand',8,createCustomHTMLContent(8,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',1)]]);
+data.addRows([[ 'united kingdom',28,createCustomHTMLContent(28,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',11,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Chickentandoori.jpg/250px-Chickentandoori.jpg','tandoori chicken',4)]]);
+data.addRows([[ 'USA',107,createCustomHTMLContent(107,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chicken_makhani.jpg/250px-Chicken_makhani.jpg','butter chicken',57,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Dosai_Chutney_Hotel_Saravana_Bhavan.jpg/250px-Dosai_Chutney_Hotel_Saravana_Bhavan.jpg','dosa',28,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Hyderabadi_Chicken_Biryani.jpg/250px-Hyderabadi_Chicken_Biryani.jpg','biryani',11)]]);
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_indian')); 
+			chart.draw(data, options);
+      }
+	  
+	  //chinese
+	  function drawRegionsMap_Chinese()
+	  {
+	   var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with chinese food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'australia',190,createCustomHTMLContent(190,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',153,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',17,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peking_Duck_3.jpg/260px-Peking_Duck_3.jpg','peking duck',10)]]);
+data.addRows([[ 'brazil',3,createCustomHTMLContent(3,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',1,'','',0)]]);
+data.addRows([[ 'canada',136,createCustomHTMLContent(136,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',89,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',29,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',9)]]);
+data.addRows([[ 'china',39,createCustomHTMLContent(39,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',36,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',1)]]);
+data.addRows([[ 'egypt',2,createCustomHTMLContent(2,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sweetsourchickensoaked.jpg/220px-Sweetsourchickensoaked.jpg','sweet and sour chicken',1,'','',0)]]);
+data.addRows([[ 'france',8,createCustomHTMLContent(8,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sweetsourchickensoaked.jpg/220px-Sweetsourchickensoaked.jpg','sweet and sour chicken',2,'','',0)]]);
+data.addRows([[ 'india',36,createCustomHTMLContent(36,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',24,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',8,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',3)]]);
+data.addRows([[ 'italy',14,createCustomHTMLContent(14,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peking_Duck_3.jpg/260px-Peking_Duck_3.jpg','peking duck',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',1)]]);
+data.addRows([[ 'japan',23,createCustomHTMLContent(23,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',18,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peking_Duck_3.jpg/260px-Peking_Duck_3.jpg','peking duck',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',2)]]);
+data.addRows([[ 'Mexico',166,createCustomHTMLContent(166,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',121,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',21,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',13)]]);
+data.addRows([[ 'russia',6,createCustomHTMLContent(6,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',0,'','',0)]]);
+data.addRows([[ 'spain',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sweetsourchickensoaked.jpg/220px-Sweetsourchickensoaked.jpg','sweet and sour chicken',1,'','',0)]]);
+data.addRows([[ 'thailand',15,createCustomHTMLContent(15,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Peking_Duck_3.jpg/260px-Peking_Duck_3.jpg','peking duck',1)]]);
+data.addRows([[ 'united kingdom',23,createCustomHTMLContent(23,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',18,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',1)]]);
+data.addRows([[ 'USA',103,createCustomHTMLContent(103,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/DumplingFillings.JPG/180px-DumplingFillings.JPG','dumplings',68,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Wonton_1.JPG/250px-Wonton_1.JPG','wontons',14,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Spring_rolls_with_peanut_sauce.jpg/220px-Spring_rolls_with_peanut_sauce.jpg','spring rolls',11)]]);
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_chinese')); 
+			chart.draw(data, options);
+		}
+			//italian
+	  function drawRegionsMap_Italian()
+	  {
+ 
+			var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with italian food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',612,createCustomHTMLContent(612,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',570,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',16,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ravioli_di_lattuga.jpg/140px-Ravioli_di_lattuga.jpg','ravioli',7)]]);
+data.addRows([[ 'australia',1500,createCustomHTMLContent(1500,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1013,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',141,'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2014_Bruschetta_The_Larder_Chiang_Mai.jpg/250px-2014_Bruschetta_The_Larder_Chiang_Mai.jpg','bruschetta',105)]]);
+data.addRows([[ 'brazil',164,createCustomHTMLContent(164,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',140,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',14,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ravioli_di_lattuga.jpg/140px-Ravioli_di_lattuga.jpg','ravioli',5)]]);
+data.addRows([[ 'canada',1808,createCustomHTMLContent(1808,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1370,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',132,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg/250px-Gnocchi_di_ricotta_burro_e_salvia.jpg','gnocchi',77)]]);
+data.addRows([[ 'china',94,createCustomHTMLContent(94,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',82,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','gelato',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg/250px-Gnocchi_di_ricotta_burro_e_salvia.jpg','gnocchi',2)]]);
+data.addRows([[ 'egypt',107,createCustomHTMLContent(107,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',103,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gnocchi_di_ricotta_burro_e_salvia.jpg/250px-Gnocchi_di_ricotta_burro_e_salvia.jpg','gnocchi',1)]]);
+data.addRows([[ 'france',298,createCustomHTMLContent(298,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',232,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',19,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ravioli_di_lattuga.jpg/140px-Ravioli_di_lattuga.jpg','ravioli',13)]]);
+data.addRows([[ 'india',727,createCustomHTMLContent(727,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',615,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',31,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',22)]]);
+data.addRows([[ 'italy',1262,createCustomHTMLContent(1262,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',876,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',129,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',72)]]);
+data.addRows([[ 'japan',615,createCustomHTMLContent(615,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',544,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',25,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',16)]]);
+data.addRows([[ 'Mexico',2505,createCustomHTMLContent(2505,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',2053,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',131,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ravioli_di_lattuga.jpg/140px-Ravioli_di_lattuga.jpg','ravioli',84)]]);
+data.addRows([[ 'russia',104,createCustomHTMLContent(104,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',95,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Tiramisu_with_cholocate_sauce_at_Ferrara_in_Little_Italy%2C_New_York_City.jpg/220px-Tiramisu_with_cholocate_sauce_at_Ferrara_in_Little_Italy%2C_New_York_City.jpg','tiramisu',3)]]);
+data.addRows([[ 'spain',269,createCustomHTMLContent(269,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',238,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',12,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',5)]]);
+data.addRows([[ 'thailand',307,createCustomHTMLContent(307,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',286,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',9,'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/2014_Bruschetta_The_Larder_Chiang_Mai.jpg/250px-2014_Bruschetta_The_Larder_Chiang_Mai.jpg','bruschetta',3)]]);
+data.addRows([[ 'united kingdom',248,createCustomHTMLContent(248,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',176,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',27,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Prosciutto_di_Parma_-_affettato2.jpg/220px-Prosciutto_di_Parma_-_affettato2.jpg','prosciutto',14)]]);
+data.addRows([[ 'USA',1611,createCustomHTMLContent(1611,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Pizza_with_tomatoes.jpg/250px-Pizza_with_tomatoes.jpg','pizza',1363,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Italian_Risotto.png/230px-Italian_Risotto.png','risotto',72,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ravioli_di_lattuga.jpg/140px-Ravioli_di_lattuga.jpg','ravioli',59)]]);
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_italian')); 
+			chart.draw(data, options);
+      }
+ 
+ 
+ //mexican
+      function drawRegionsMap_Mexican() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with Mexican food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',234,createCustomHTMLContent(234,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',100,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flickr_dongkwan_540812245--Shrimp_Tostada.jpg/250px-Flickr_dongkwan_540812245--Shrimp_Tostada.jpg','tostadas',91,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',15)]]);
+data.addRows([[ 'australia',376,createCustomHTMLContent(376,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',125,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',101,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',96)]]);
+data.addRows([[ 'brazil',15,createCustomHTMLContent(15,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',3)]]);
+data.addRows([[ 'canada',681,createCustomHTMLContent(681,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',286,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',194,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',93)]]);
+data.addRows([[ 'china',12,createCustomHTMLContent(12,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',2)]]);
+data.addRows([[ 'egypt',3,createCustomHTMLContent(3,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',1,'','',0)]]);
+data.addRows([[ 'france',65,createCustomHTMLContent(65,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',22,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',19,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',13)]]);
+data.addRows([[ 'india',342,createCustomHTMLContent(342,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',193,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',83,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',44)]]);
+data.addRows([[ 'italy',47,createCustomHTMLContent(47,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',14,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',13,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',9)]]);
+data.addRows([[ 'japan',88,createCustomHTMLContent(88,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',59,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',12,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',5)]]);
+data.addRows([[ 'Mexico',1803,createCustomHTMLContent(1803,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',719,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Chilaquiles_Rojos.JPG/220px-Chilaquiles_Rojos.JPG','chilaquiles',450,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',216)]]);
+data.addRows([[ 'russia',8,createCustomHTMLContent(8,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Nachos-cheese.jpg/250px-Nachos-cheese.jpg','nachos',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',1)]]);
+data.addRows([[ 'spain',93,createCustomHTMLContent(93,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',23,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flickr_dongkwan_540812245--Shrimp_Tostada.jpg/250px-Flickr_dongkwan_540812245--Shrimp_Tostada.jpg','tostadas',21,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',14)]]);
+data.addRows([[ 'thailand',63,createCustomHTMLContent(63,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Chilaquiles_Rojos.JPG/220px-Chilaquiles_Rojos.JPG','chilaquiles',46,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',8,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',7)]]);
+data.addRows([[ 'united kingdom',46,createCustomHTMLContent(46,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',20,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',9)]]);
+data.addRows([[ 'USA',925,createCustomHTMLContent(925,'https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg/220px-001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg','tacos',398,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Breakfast_burritos.jpg/220px-Breakfast_burritos.jpg','burrito',281,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Guacamole_IMGP1265.jpg/300px-Guacamole_IMGP1265.jpg','guacamole',95)]]);
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_mexican')); 
+			chart.draw(data, options);
+      }
+	  
+ 
+ 
+ //french
+      function drawRegionsMap_French() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with French food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'australia',8,createCustomHTMLContent(8,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coq_au_vin_rouge.jpg/250px-Coq_au_vin_rouge.jpg','coq au vin',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Cooked_snails.JPG/240px-Cooked_snails.JPG','escargots de bourgogne',1)]]);
+data.addRows([[ 'canada',6,createCustomHTMLContent(6,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coq_au_vin_rouge.jpg/250px-Coq_au_vin_rouge.jpg','coq au vin',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',1)]]);
+data.addRows([[ 'france',7,createCustomHTMLContent(7,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coq_au_vin_rouge.jpg/250px-Coq_au_vin_rouge.jpg','coq au vin',1)]]);
+data.addRows([[ 'india',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',1,'','',0,'','',0)]]);
+data.addRows([[ 'japan',2,createCustomHTMLContent(2,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/250px-Bullabessa.jpg','bouillabaisse',2,'','',0,'','',0)]]);
+data.addRows([[ 'Mexico',7,createCustomHTMLContent(7,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Coq_au_vin_rouge.jpg/250px-Coq_au_vin_rouge.jpg','coq au vin',1)]]);
+data.addRows([[ 'thailand',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',1,'','',0,'','',0)]]);
+data.addRows([[ 'united kingdom',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Bullabessa.jpg/250px-Bullabessa.jpg','bouillabaisse',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',1)]]);
+data.addRows([[ 'USA',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Bowl_of_cassoulet.JPG/320px-Bowl_of_cassoulet.JPG','cassoulet',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Quiche.jpg/250px-Quiche.jpg','quiche lorraine',1,'','',0)]]);
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_french')); 
+			chart.draw(data, options);
+      }
+ 
+ 
+ 
+ //spanish
+      function drawRegionsMap_Spanish() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with Spanish food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',35,createCustomHTMLContent(35,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',26,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',8,'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Rabo_de_toro-Estofado_%2801%29.JPG/220px-Rabo_de_toro-Estofado_%2801%29.JPG','rabo de toro',1)]]);
+data.addRows([[ 'australia',226,createCustomHTMLContent(226,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',206,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',17,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',3)]]);
+data.addRows([[ 'brazil',4,createCustomHTMLContent(4,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',1,'','',0)]]);
+data.addRows([[ 'canada',106,createCustomHTMLContent(106,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',95,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',7,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',4)]]);
+data.addRows([[ 'china',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',1)]]);
+data.addRows([[ 'france',28,createCustomHTMLContent(28,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',23,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',2)]]);
+data.addRows([[ 'india',32,createCustomHTMLContent(32,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',29,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',3,'','',0)]]);
+data.addRows([[ 'italy',17,createCustomHTMLContent(17,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',8,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',3)]]);
+data.addRows([[ 'japan',7,createCustomHTMLContent(7,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Gambas_al_ajillo.jpg/220px-Gambas_al_ajillo.jpg','gambas al ajillo',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',1)]]);
+data.addRows([[ 'Mexico',237,createCustomHTMLContent(237,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',195,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',30,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',11)]]);
+data.addRows([[ 'russia',4,createCustomHTMLContent(4,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',1,'','',0)]]);
+data.addRows([[ 'spain',74,createCustomHTMLContent(74,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',38,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',17,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',12)]]);
+data.addRows([[ 'thailand',13,createCustomHTMLContent(13,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',1)]]);
+data.addRows([[ 'united kingdom',52,createCustomHTMLContent(52,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',47,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Gambas_al_ajillo.jpg/220px-Gambas_al_ajillo.jpg','gambas al ajillo',2)]]);
+data.addRows([[ 'USA',123,createCustomHTMLContent(123,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Palacioschorizo.jpg/220px-Palacioschorizo.jpg','chorizo',106,'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg/200px-Jamon_Iberico_on_Passeig_de_Gracia_Barcelona.jpg','jamon',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg/250px-Gazpacho_con_su_guarnici%C3%B3n_-_jlastras.jpg','gazpacho',7)]]);
+
+
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_Spanish')); 
+			chart.draw(data, options);
+      }
+ 
+ 
+ //Australian
+      function drawRegionsMap_Austrlian() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with Australian food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',2,createCustomHTMLContent(2,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',2,'','',0,'','',0)]]);
+data.addRows([[ 'australia',45,createCustomHTMLContent(45,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',21,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',7,'https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Steamed_Dim_Sim.jpg/250px-Steamed_Dim_Sim.jpg','dim sim',6)]]);
+data.addRows([[ 'brazil',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',1,'','',0,'','',0)]]);
+data.addRows([[ 'canada',13,createCustomHTMLContent(13,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Meat_pie.jpg/250px-Meat_pie.jpg','meat pies',2)]]);
+data.addRows([[ 'egypt',2,createCustomHTMLContent(2,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',1,'','',0)]]);
+data.addRows([[ 'france',2,createCustomHTMLContent(2,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kanikama.jpg/220px-Kanikama.jpg','crab sticks',1,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',1,'','',0)]]);
+data.addRows([[ 'india',5,createCustomHTMLContent(5,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/NZ_Lamington.jpg/300px-NZ_Lamington.jpg','lamington',1)]]);
+data.addRows([[ 'italy',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',1,'','',0,'','',0)]]);
+data.addRows([[ 'japan',3,createCustomHTMLContent(3,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Tim_Tams.jpg/220px-Tim_Tams.jpg','tim tam',1,'','',0)]]);
+data.addRows([[ 'Mexico',21,createCustomHTMLContent(21,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',15,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kanikama.jpg/220px-Kanikama.jpg','crab sticks',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',2)]]);
+data.addRows([[ 'russia',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kanikama.jpg/220px-Kanikama.jpg','crab sticks',1,'','',0,'','',0)]]);
+data.addRows([[ 'spain',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',1,'','',0,'','',0)]]);
+data.addRows([[ 'united kingdom',8,createCustomHTMLContent(8,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Irwins_potato_cakes_modified.jpg/250px-Irwins_potato_cakes_modified.jpg','potato cakes',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Kanikama.jpg/220px-Kanikama.jpg','crab sticks',1)]]);
+data.addRows([[ 'USA',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pavlova_dessert.JPG/300px-Pavlova_dessert.JPG','pavlova',1,'','',0,'','',0)]]);
+
+
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_Australian')); 
+			chart.draw(data, options);
+      }
+ 
+ 
+ //japanese
+      function drawRegionsMap_Japanese() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with japanese food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',370,createCustomHTMLContent(370,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',321,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',46,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',3)]]);
+data.addRows([[ 'australia',753,createCustomHTMLContent(753,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',521,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',126,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',51)]]);
+data.addRows([[ 'brazil',140,createCustomHTMLContent(140,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',102,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',20,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',10)]]);
+data.addRows([[ 'canada',1124,createCustomHTMLContent(1124,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',911,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',137,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',41)]]);
+data.addRows([[ 'china',73,createCustomHTMLContent(73,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',55,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',2)]]);
+data.addRows([[ 'egypt',42,createCustomHTMLContent(42,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',37,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',1)]]);
+data.addRows([[ 'france',255,createCustomHTMLContent(255,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',210,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',19,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',11)]]);
+data.addRows([[ 'india',181,createCustomHTMLContent(181,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',136,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',31,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',7)]]);
+data.addRows([[ 'italy',525,createCustomHTMLContent(525,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',468,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',39,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',9)]]);
+data.addRows([[ 'japan',2074,createCustomHTMLContent(2074,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',969,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',593,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',226)]]);
+data.addRows([[ 'Mexico',2761,createCustomHTMLContent(2761,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',2001,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',496,'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Tempura.JPG/160px-Tempura.JPG','tempura',95)]]);
+data.addRows([[ 'russia',110,createCustomHTMLContent(110,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',95,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',2)]]);
+data.addRows([[ 'spain',195,createCustomHTMLContent(195,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',155,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',21,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',10)]]);
+data.addRows([[ 'thailand',605,createCustomHTMLContent(605,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',298,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',228,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',29)]]);
+data.addRows([[ 'united kingdom',183,createCustomHTMLContent(183,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',157,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',15,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',3)]]);
+data.addRows([[ 'USA',1151,createCustomHTMLContent(1151,'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2007feb-sushi-odaiba-manytypes.jpg/290px-2007feb-sushi-odaiba-manytypes.jpg','sushi',781,'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Soy_ramen.jpg/250px-Soy_ramen.jpg','ramen',281,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Noodlesalad1.jpg/200px-Noodlesalad1.jpg','soba',48)]]);
+
+
+
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_japanese')); 
+			chart.draw(data, options);
+      }
+ 
+ //lebanese
+      function drawRegionsMap_Lebanese() {
+
+        var data = new google.visualization.DataTable();
+var data = new google.visualization.DataTable();
+
+			data.addColumn('string', 'Country');                                
+			data.addColumn('number', 'tweets with lebanese food');
+			data.addColumn({type:'string', role:'tooltip','p': {'html': true}}); 
+			
+data.addRows([[ 'argentina',9,createCustomHTMLContent(9,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Baklava_-_Turkish_special%2C_80-ply.JPEG/250px-Baklava_-_Turkish_special%2C_80-ply.JPEG','baklava',1)]]);
+data.addRows([[ 'australia',122,createCustomHTMLContent(122,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',59,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',41,'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Baklava_-_Turkish_special%2C_80-ply.JPEG/250px-Baklava_-_Turkish_special%2C_80-ply.JPEG','baklava',6)]]);
+data.addRows([[ 'brazil',4,createCustomHTMLContent(4,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',2,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',2,'','',0)]]);
+data.addRows([[ 'canada',243,createCustomHTMLContent(243,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',132,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',66,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',35)]]);
+data.addRows([[ 'china',1,createCustomHTMLContent(1,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',1,'','',0,'','',0)]]);
+data.addRows([[ 'egypt',24,createCustomHTMLContent(24,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',19,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Etli_dolma.JPG/250px-Etli_dolma.JPG','dolma',1)]]);
+data.addRows([[ 'france',28,createCustomHTMLContent(28,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',14,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Etli_dolma.JPG/250px-Etli_dolma.JPG','dolma',1)]]);
+data.addRows([[ 'india',88,createCustomHTMLContent(88,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',46,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',23,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',12)]]);
+data.addRows([[ 'italy',17,createCustomHTMLContent(17,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',10,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Etli_dolma.JPG/250px-Etli_dolma.JPG','dolma',2)]]);
+data.addRows([[ 'japan',18,createCustomHTMLContent(18,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',9,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',2)]]);
+data.addRows([[ 'Mexico',123,createCustomHTMLContent(123,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',55,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',33,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',26)]]);
+data.addRows([[ 'russia',6,createCustomHTMLContent(6,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',1,'','',0)]]);
+data.addRows([[ 'spain',11,createCustomHTMLContent(11,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',6,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',4,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Etli_dolma.JPG/250px-Etli_dolma.JPG','baklava',1)]]);
+data.addRows([[ 'thailand',11,createCustomHTMLContent(11,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',5,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',3,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',2)]]);
+data.addRows([[ 'united kingdom',42,createCustomHTMLContent(42,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',21,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',19,'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Etli_dolma.JPG/250px-Etli_dolma.JPG','baklava',1)]]);
+data.addRows([[ 'USA',183,createCustomHTMLContent(183,'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Hummus_from_The_Nile.jpg/230px-Hummus_from_The_Nile.jpg','hummus',125,'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Falafel_balls.jpg/250px-Falafel_balls.jpg','falafel',38,'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Shawarma_%282223426004%29.jpg/250px-Shawarma_%282223426004%29.jpg','shawarma',9)]]);
+
+
+
+
+
+
+
+
+
+
+                               
+			var options = {
+				colorAxis: {colors: ['#00853f','blue', 'black', '#e31b23']},
+				  
+				backgroundColor: '#81d4fa',   
+				datalessRegionColor: '#C8C8C8',
+				//defaultColor:'#e31b23',
+				enableRegionInteractivity: 'true', 
+				resolution: 'countries',
+				sizeAxis: {minValue: 1, maxValue:1,minSize:5,  maxSize: 5},
+				region:'auto',
+				keepAspectRatio: true,
+				focusTarget: 'category',
+				tooltip: {textStyle: {color: 'green'},isHtml: true }    
+				};
+			var chart = new google.visualization.GeoChart(document.getElementById('regions_div_Lebanese')); 
+			chart.draw(data, options);
+      }
+ 
+ 
+    
+	  function createCustomHTMLContent(total,dishURL1,dish1,count1,dishURL2,dish2,count2,dishURL3,dish3,count3)
+	  {
+	  if(count2 ==0)
+	  {
+	  return '<div>' +'<center><h3><b>Total tweets  - ' +total+'</b></h2></center>'+
+      '<table>' + '<tr>' +
+      '<td><img src="'+dishURL1+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish1 + '</b></td>'+
+      '<td><b>' + count1 + '</b></td>' + '</tr>' +'</div>';
+	  }
+	  else if (count3==0)
+	  {
+	  return '<div>' +'<center><h3><b>Total tweets  - ' +total+'</b></h2></center>'+
+      '<table>' + '<tr>' +
+      '<td><img src="'+dishURL1+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish1 + '</b></td>'+
+      '<td><b>' + count1 + '</b></td>' + '</tr>' 
+	  + '<tr>' +
+      '<td><img src="'+dishURL2+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish2 + '</b></td>'+
+      '<td><b>' + count2 + '</b></td>' + '</tr>' 
+	  + '</div>';
+	  }
+	  else
+	  {
+	    return '<div>' +'<center><h3><b>Total tweets  - ' +total+'</b></h2></center>'+
+      '<table>' + '<tr>' +
+      '<td><img src="'+dishURL1+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish1 + '</b></td>'+
+      '<td><b>' + count1 + '</b></td>' + '</tr>' 
+	  + '<tr>' +
+      '<td><img src="'+dishURL2+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish2 + '</b></td>'+
+      '<td><b>' + count2 + '</b></td>' + '</tr>' 
+	  +'<tr>' +
+      '<td><img src="'+dishURL3+'" style="width:25px;height:25px"/></td>' +
+      '<td><b>' + dish3 + '</b></td>'+
+      '<td><b>' + count3 + '</b></td>' + '</tr>' 
+	  + '</div>';
+      }
+	  
+	  }
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+
+      
+    </script>
+  </head>
+  <body>
+  <center>
+  <h1>World Map of Popular dishes</h1>
+    <div id="regions_div_all" style="width: 900px; height: 500px;"></div>
+  <h1>World Map of Popular Indian dishes</h1>
+    <div id="regions_div_indian" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Chinese dishes</h1>
+    <div id="regions_div_chinese" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Italian dishes</h1>
+    <div id="regions_div_italian" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Mexican dishes</h1>
+    <div id="regions_div_mexican" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular French dishes</h1>
+    <div id="regions_div_french" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Spanish dishes</h1>
+    <div id="regions_div_Spanish" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Australian dishes</h1>
+    <div id="regions_div_Australian" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Japanese dishes</h1>
+    <div id="regions_div_japanese" style="width: 900px; height: 500px;"></div>
+	<h1>World Map of Popular Lebanese dishes</h1>
+    <div id="regions_div_Lebanese" style="width: 900px; height: 500px;"></div>
+	</center>
+  </body>
+</html>
